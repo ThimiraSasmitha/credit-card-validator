@@ -1,6 +1,6 @@
 # credit-card-validator
 
-[![CI](https://github.com/YOUR-USERNAME/credit-card-validator/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/credit-card-validator/actions/workflows/ci.yml)
+[![CI](https://github.com/ThimiraSasmitha/credit-card-validator/actions/workflows/ci.yml/badge.svg)](https://github.com/ThimiraSasmitha/credit-card-validator/actions/workflows/ci.yml)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
@@ -20,7 +20,7 @@ A small, dependency-free Python library and command-line tool that validates pay
 ## Install
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/credit-card-validator.git
+git clone https://github.com/ThimiraSasmitha/credit-card-validator.git
 cd credit-card-validator
 pip install .
 ```

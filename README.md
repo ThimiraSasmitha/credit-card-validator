@@ -77,18 +77,18 @@ from ccvalidator import validate_card, luhn_valid, detect_brand, mask_number
 
 result = validate_card("4111 1111 1111 1111", cvv="123", expiry="12/2030")
 
-result.valid          # True
-result.brand.value    # "Visa"
+result.valid  # True
+result.brand.value  # "Visa"
 result.masked_number  # "************1111"
-result.errors         # ()
+result.errors  # ()
 
-bad = validate_card("3782822463100050")   # 16 digits is not a legal Amex length
-bad.errors            # ("American Express numbers must be 15 digits long (got 16).",
-                      #  "Card number fails the Luhn checksum.")
+bad = validate_card("3782822463100050")  # 16 digits is not a legal Amex length
+bad.errors  # ("American Express numbers must be 15 digits long (got 16).",
+#  "Card number fails the Luhn checksum.")
 
-luhn_valid("4111111111111111")   # True
-detect_brand("5555555555554444") # CardBrand.MASTERCARD
-mask_number("378282246310005")   # "***********0005"
+luhn_valid("4111111111111111")  # True
+detect_brand("5555555555554444")  # CardBrand.MASTERCARD
+mask_number("378282246310005")  # "***********0005"
 ```
 
 Pass `allow_unknown_brand=True` to `validate_card` to accept any Luhn-valid 12-19 digit number, and

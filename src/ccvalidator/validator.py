@@ -113,10 +113,7 @@ class ValidationResult:
             "errors": list(self.errors),
         }
 
-
-# --------------------------------------------------------------------------- #
 # Building blocks
-# --------------------------------------------------------------------------- #
 def clean_number(number: str) -> str:
     """Strip spaces and dashes from a card number string."""
     return _SEPARATORS.sub("", number)
@@ -197,10 +194,7 @@ def is_expiry_valid(expiry: str, today: date | None = None) -> bool:
         return False
     return year <= today.year + MAX_EXPIRY_YEARS_AHEAD
 
-
-# --------------------------------------------------------------------------- #
 # High-level API
-# --------------------------------------------------------------------------- #
 def validate_card(
     number: str,
     cvv: str | None = None,
@@ -279,10 +273,7 @@ def validate_card_number(number: str, *, allow_unknown_brand: bool = False) -> V
     """Shortcut for ``validate_card(number)`` when you only have a card number."""
     return validate_card(number, allow_unknown_brand=allow_unknown_brand)
 
-
-# --------------------------------------------------------------------------- #
 # Helpers
-# --------------------------------------------------------------------------- #
 def _find_spec(cleaned: str) -> _BrandSpec | None:
     for spec in _BRANDS:
         if spec.prefix.match(cleaned):
